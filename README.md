@@ -1,7 +1,6 @@
 # El-problema-de-Monty-Hall
 Simulación del problema de Monty Hall en Python
 
-
 El concursante debe elegir una puerta entre tres (todas cerradas); 
 el premio consiste en llevarse lo que se encuentra detrás de la elegida. 
 Se sabe con certeza que tras una de ellas se oculta un automóvil, y tras las otras dos hay cabras. 
@@ -17,7 +16,6 @@ Esta solución se basa en tres suposiciones básicas:
 - que el presentador siempre abre una puerta,
 - que tras la que el presentador ha abierto siempre hay una cabra, puesto que conoce lo que hay detrás de cada puerta,
 - que el presentador la escoge entre las dos restantes después de que el concursante haya escogido la suya.
-
 
 El código propuesto simula el experimento de la paradoja de Monty Hall unas 500 veces y devuelve los resultados según si:
 a) El jugador SIEMPRE cambia de puerta
