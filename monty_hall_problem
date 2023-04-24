@@ -1,0 +1,50 @@
+#  El problema de Monty Hall
+
+#  Supón que estás en un concurso, y se te ofrece escoger entre tres puertas: 
+#  detrás de una de ellas hay un coche, y detrás de las otras, cabras. 
+#  Escoges una puerta, digamos la nº1, y el presentador, que sabe lo que hay detrás de las puertas, abre otra,
+#  digamos la nº3, que contiene una cabra. 
+#  Entonces te pregunta: "¿No prefieres escoger la nº2?". ¿Es mejor para ti cambiar tu elección?
+#  (Wikipedia)
+
+
+
+import random
+
+cambia = []            #Puntajes recibidos cuando el jugador SIEMPRE cambia de puerta
+no_cambia = []         #Puntajes recibidos cuando el jugador NUNCA cambia de puerta
+
+for i in range(500):
+    #paso 1, ubicar el auto en una de las tres puertas
+    auto = random.randint(1, 3)
+
+    #paso 2, el jugador elige su puerta
+    jugador = random.randint(1, 3)
+
+    if auto == jugador:
+        cambia.append(0)       #Como el jugador cambia, entonces pierde
+        no_cambia.append(1)    #Como el jugador NO cambia, entonces gana
+    else:
+        cambia.append(1)       #Como el jugador cambia, entonces gana      
+        no_cambia.append(0)    #Como el jugador NO cambia, entonces pierde
+
+
+# En esta opción, el jugador siempre cambia. Entonces, 
+# si auto y jugador son diferentes, el jugador gana (porque cambió)
+print("Cuando el jugador cambia de puerta: ")
+print("Intentos: ",len(cambia))
+print("Aciertos: ",sum(cambia))
+
+print("% de victorias: ",(sum(cambia) * 100 / len(cambia)), "%")
+
+
+print("-----------------")
+
+# En esta opción, el jugador nunca cambia. Entonces, 
+# si auto y jugador son iguales, el jugador gana.
+print("Cuando el jugador NO cambia de puerta: ")
+print("Intentos: ",len(no_cambia))
+print("Aciertos: ",sum(no_cambia))
+
+print("% de victorias: ",(sum(no_cambia) * 100 / len(no_cambia)), "%")
+
