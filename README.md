@@ -17,3 +17,8 @@ Esta solución se basa en tres suposiciones básicas:
 - que el presentador siempre abre una puerta,
 - que tras la que el presentador ha abierto siempre hay una cabra, puesto que conoce lo que hay detrás de cada puerta,
 - que el presentador la escoge entre las dos restantes después de que el concursante haya escogido la suya.
+
+
+El código propuesto simula el experimento de la paradoja de Monty Hall unas 500 veces y devuelve los resultados según si:
+a) El jugador SIEMPRE cambia de puerta
+b) El jugador NUNCA cambia de puerta
